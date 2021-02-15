@@ -1,0 +1,31 @@
+<!-- side bar main wrapper -->
+<div class="side-nav-bar" [ngClass]="{ 'side-nav-bar-collapsed': !(showSideNav | async) }">
+
+    <!-- add function para cerrar overlay on click (click)="onSidebarClose()"-->
+
+    <div class="side-nav-bar-overlay" [ngStyle]="{ 'transition': 'background-color ' + duration + 's, visibility ' + duration + 's' }" [ngClass]="{ 'side-nav-bar-overlay-collapsed': !(showSideNav | async) }"></div>
+
+    <!-- side bar-->
+    <div class="side-nav-bar-container" [ngStyle]="getSideNavBarStyle((showSideNav | async))">
+
+        <div class="side-nav-bar-header-container">
+            <ng-container *ngIf="header">
+                <div class="title">
+                    <img src="https://www.grupocetep.cl/wp-content/uploads/2020/05/bancoestado.png" height="32" alt="Logo Bancoestado">
+                    <a href="#" class="help-label"><i class="material-icons">help_outline</i> Centro de ayuda</a>
+                </div>
+            </ng-container>
+            <span class="material-icons side-nav-bar-close" (click)="onSidebarClose()">clear</span>
+        </div>
+
+        <div class="side-nav-bar-content">
+            <ng-container *ngTemplateOutlet="sidenavTemplateRef"></ng-container>
+        </div>
+
+        <ng-container *ngIf="footer">
+            <div class="side-nav-bar-footer">
+                soi footer
+            </div>
+        </ng-container>
+    </div>
+</div>
