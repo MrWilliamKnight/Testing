@@ -1,12 +1,15 @@
-<app-side-nav [sidenavTemplateRef]="navContent" [header]="true" [footer]="true" [direction]="'right'" [navWidth]="500"></app-side-nav>
+<!-- Contenido página -->
 <div class="main-container">
     <app-header></app-header>
-    <h1>this is test for slide component</h1>
+    <h1>SLIDE DE FONDO</h1>
     <section>
         <router-outlet></router-outlet>
     </section>
 </div>
 
+<!-- sideBar -->
+<app-side-nav [sidenavTemplateRef]="navContent" [header]="true" [footer]="true" [direction]="'right'" [navWidth]="500"></app-side-nav>
+<!-- Relleno del Content del SideBar -->
 <ng-template #navContent>
     <app-formulario></app-formulario>
 </ng-template>

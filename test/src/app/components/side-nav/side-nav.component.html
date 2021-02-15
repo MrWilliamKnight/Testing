@@ -8,7 +8,7 @@
     <!-- side bar-->
     <div class="side-nav-bar-container" [ngStyle]="getSideNavBarStyle((showSideNav | async))">
 
-        <div class="side-nav-bar-header-container">
+        <div class="side-nav-bar-header-container border">
             <ng-container *ngIf="header">
                 <div class="title">
                     <img src="https://www.grupocetep.cl/wp-content/uploads/2020/05/bancoestado.png" height="32" alt="Logo Bancoestado">
@@ -23,7 +23,7 @@
         </div>
 
         <ng-container *ngIf="footer">
-            <div class="side-nav-bar-footer">
+            <div class="side-nav-bar-footer border">
                 soi footer
             </div>
         </ng-container>

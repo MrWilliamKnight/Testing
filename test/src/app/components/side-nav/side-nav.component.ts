@@ -21,8 +21,9 @@ export class SideNavComponent implements OnInit {
   
   @Input() header:boolean;
   @Input() footer:boolean;  
-  @Input() sidenavHeaderRef: any;
-  @Input() sidenavFooterRef: any;  
+  //opcional
+  /* @Input() sidenavHeaderRef: any;
+   @Input() sidenavFooterRef: any;  */
 
   constructor(private navService: NavigationService) { }
 

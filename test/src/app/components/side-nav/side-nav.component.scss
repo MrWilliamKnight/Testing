@@ -26,6 +26,9 @@ a {
             align-items: center;
             padding: 8px 16px;
             justify-content: space-between;
+            &.border {
+                border-bottom: 1px solid #e3e3e3;
+            }
             .title {
                 display: flex;
                 align-items: center;
@@ -55,6 +58,9 @@ a {
     }
     .side-nav-bar-footer {
         padding: 16px;
+        &.border {
+            border-top: 1px solid #e3e3e3;
+        }
     }
 }
 
